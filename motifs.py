@@ -57,8 +57,7 @@ def Score(Motifs):
     return score
 
 
-def Entropy(
-        Motifs):  # like score, but takes into account variation within column, treating like probability distribution
+def Entropy(Motifs):  # like score, but takes into account variation within column, treating like probability distribution
     from math import log
     profile = Profile(Motifs)
     entropy = 0
@@ -242,6 +241,7 @@ def WeightedDie(Probabilities):
 #    p -= Probabilities[kmer]
 #    if p <= 0:
 #         return kmer
+
 
 def ProfileGeneratedString(Text, Profile, k):
     n = len(Text)
